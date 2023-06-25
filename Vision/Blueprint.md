@@ -10,6 +10,7 @@
 * Industrial scale feasability and opportunities
 * Ingredient deliveries
 * Comprehensive blood test packages
+* Athletes on diet, seeking optimization, macronutrient specification.
 
 ### LLM integration
 * scan recipes and output complete nutrition info.
