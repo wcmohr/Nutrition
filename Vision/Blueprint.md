@@ -11,6 +11,12 @@
 * Ingredient deliveries
 * Comprehensive blood test packages
 * Athletes on diet, seeking optimization, macronutrient specification.
+* Certification programs for restaurants.
+
 
 ### LLM integration
 * scan recipes and output complete nutrition info.
+
+### Community
+* Open source community website and tools.
+* Database functionality for micronutrients: phytochemicals, etc.
