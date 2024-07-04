@@ -13,6 +13,4 @@ The whfoods.ipynb notebook is the current focus of development on the whfoods da
 
 The data_wrangling.ipynb notebook contains efforts to clean the kaggle Nutrition dataset.  This dataset is less useful than the whfoods data as it is overly granular with regards to food type and also does not include enough fruit, vegetables, and nuts.  Eventually, it will be necessary to incorporate additional foods into the whfoods dataset.
 
-### Further development
-1) sustainability: water/energy input requirements for world population nutrition levels.
-2) 
+

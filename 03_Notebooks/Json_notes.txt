@@ -1,0 +1,21 @@
+
+# # Step 2: Access and work with nested data
+# # Let's say your JSON has a list of "users" and each user has a "name" and "age".
+# for info in data["FoundationFoods"]:
+#     foodClass = info['foodClass']
+#     description = info['description']
+#     foodNutrients = info["foodNutrients"]
+#     foodAttributes = info["foodAttributes"]
+#     nutrientConversionFactors = info["nutrientConversionFactors"]
+#     isHistoricalReference = info["isHistoricalReference"]
+#     ndbNumber = info["ndbNumber"]
+#     fdcId = info["fdcId"]
+#     dataType = info["dataType"]
+#     foodPortions = info["foodPortions"]
+#     publicationDate = info["publicationDate"]
+#     inputFoods = info["inputFoods"]
+#     # foodCategory_description = info["foodCategory.description"]
+#     # scientificName = info["scientificName"]
+#     # print(f"Name: {name}, Age: {age}")
+
+# # Now you can work with the "data" va
