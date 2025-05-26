@@ -17,6 +17,7 @@
 * categorization (plant, animal, vegetable, fruit, nut, etc.)
 * nutrition label & ingredients list to arrive at ingredient proportions
 * optimization with uncertain data: https://web.stanford.edu/class/ee364b/lectures/robust_notes.pdf
+* Clustering of food recommendations according to genetics
     
 # Glossary
 1) Primary metabolites are necessary for plant life and include carbohydrates, amino acids, proteins, lipids, purines, and pyrimidines of nucleic acids()

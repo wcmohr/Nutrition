@@ -12,7 +12,9 @@
 * Comprehensive blood test packages
 * Athletes on diet, seeking optimization, macronutrient specification.
 * Certification programs for restaurants.
-* Food purchasing links with best prices available.
+* Food purchasing links with best prices available
+* names for restaurant chain: GeekGrub (GG heart disease, diabetes, etc.), Hungry Hermit,
+* 
 
 
 ### LLM integration
@@ -21,3 +23,4 @@
 ### Community
 * Open source community website and tools.
 * Database functionality for micronutrients: phytochemicals, etc.
+* 
