@@ -6,12 +6,13 @@ import numpy as np
 # functions list ---> CorrelationCutoff, formulateMP, checkFeasibility, infeasibilitySearch
 
 def CorrelationCutoff(a_series, corr):
-    """Take in a series with correlation values and a correlation cutoff point.
+    """ --- Deprecate --- Take in a series with correlation values and a correlation cutoff point.
     Return the indices for which the correlations are greater than or equal to
     the cutoff."""
     return a_series[a_series.values>=corr].index
 
-def formulateMP(foods, nutrient_constraints, servings_constraints,integer='true'):
+
+def formulateMP(foods, nutrient_constraints, servings_constraints,integer= True):
     '''return the PuLP lp formulation for minimizing
     calories.
     
@@ -22,7 +23,7 @@ def formulateMP(foods, nutrient_constraints, servings_constraints,integer='true'
     '''
     
     # Decision Variables
-    food_vars  = {food:
+    food_vars  = {food: 
     plp.LpVariable(cat=[plp.LpInteger if integer else plp.LpContinuous][0], 
                    lowBound=servings_constraints.loc[food][0],
                    upBound=servings_constraints.loc[food][1],
@@ -52,7 +53,7 @@ def formulateMP(foods, nutrient_constraints, servings_constraints,integer='true'
     
     return min_cals
 
-def checkFeasibility(foods, constraints):
+def checkFeasibility(foods, constraints, serv_constraints):
     '''Formulate lp problem and return status and optimal coefficients if 
     feasible as 2-tuple'''
     
@@ -60,15 +61,16 @@ def checkFeasibility(foods, constraints):
     min_cals.solve(PULP_CBC_CMD(msg=0))
     return min_cals.status, min_cals.coefficients
 
-def infeasibilitySearch(foods, constraints):
+def infeasibilitySearch(foods, constraints, serv_constraints):
     '''return 2d array with indices of constraints that constitute a solvable model
     and second the indices which cause an insolvable model when included.'''
     
     solvable = []
     brk_pts = []
     for i in range(0,constraints.shape[0]):
+        # iteratively check all candidates, re-assessing after removing an infeasible constraint. 
         candidates = [j for j in range(0,i+1) if j not in brk_pts]
-        status = checkFeasibility(foods,constraints.iloc[candidates,:])[0]
+        status = checkFeasibility(foods,constraints.iloc[candidates,:],serv_constraints)[0]
         if (status == -1):
             brk_pts.append(i)
         else:
